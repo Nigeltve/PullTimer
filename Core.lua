@@ -11,12 +11,24 @@ function SlashCmdList.PULLER(msg, _)
 		table.insert(args, strlower(token))
 	end
 
+    if not core.utils:InGroup() then
+        core.logger:LogError("You are not in a group")
+        return
+    end
+
+    if not core.utils:IsLeader() then
+        core.logger:LogError("You must be group leader or assistant to start timers")
+        return
+    end
+
     if args[1] == core.enums.commands.breakTimer then
+        core.logger:LogInfo("Setting Break Timer")
         C_PartyInfo.DoCountdown(300)
         return
     end
 
     if args[1] == core.enums.commands.clear then
+        core.logger:LogInfo("Clearing Timer")
         C_PartyInfo.DoCountdown(0)
         return
     end

@@ -1,6 +1,8 @@
 ---@type Core
 local core = select(2, ...)
 
+local unitType = "player"
+
 core.utils = {
     IsNumber = function(self, val)
         if val == nil then
@@ -13,5 +15,13 @@ core.utils = {
         else 
             return true, num
         end
+    end,
+
+    InGroup = function(self)
+        return UnitInAnyGroup(unitType)
+    end,
+
+    IsLeader = function(self)
+        return UnitIsGroupLeader(unitType) or UnitIsGroupAssistant(unitType)
     end
 }
