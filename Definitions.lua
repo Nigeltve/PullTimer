@@ -1,5 +1,7 @@
 ---@class Utils: table
 ---@field IsNumber fun(self: Utils, val: any) : boolean, number
+---@field InGroup fun(self: Utils) : boolean
+---@field IsLeader fun(self: Utils) : boolean
 
 ---@class Logger: table
 ---@field canDebug boolean
