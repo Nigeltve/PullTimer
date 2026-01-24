@@ -7,9 +7,9 @@ SLASH_PULLER1 = '/pull'
 function SlashCmdList.PULLER(msg, _)
     local args = {}
 
-	for token in string.gmatch(msg or "", "%S+") do
-		table.insert(args, strlower(token))
-	end
+    for token in string.gmatch(msg or "", "%S+") do
+        table.insert(args, strlower(token))
+    end
 
     if not core.utils:InGroup() then
         core.logger:LogError("You are not in a group")
@@ -23,7 +23,14 @@ function SlashCmdList.PULLER(msg, _)
 
     if args[1] == core.enums.commands.breakTimer then
         core.logger:LogInfo("Setting Break Timer")
-        C_PartyInfo.DoCountdown(300)
+        local breakDuration = 300
+        if args[2] then
+            local isNumber, minutes = core.utils:IsNumber(args[2])
+            if isNumber then
+                breakDuration = minutes * 60
+            end
+        end
+        C_PartyInfo.DoCountdown(breakDuration)
         return
     end
 
