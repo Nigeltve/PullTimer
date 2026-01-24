@@ -20,9 +20,9 @@ Creates a countdown timer for the specified number of seconds. The timer will be
 
 ### Break Timer
 ```
-/pull break
+/pull break <minutes>
 ```
-Starts a 5-minute (300 second) break timer. Useful for coordinating breaks during raid sessions.
+Starts a break timer. Useful for coordinating breaks during raid sessions. If no time given, defaults to 5-minutes (300 seconds).
 
 ### Clear Timer
 ```
