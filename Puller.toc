@@ -5,6 +5,7 @@
 ## Version: 0.0.1
 ## SavedVariables: ProfileDB
 ## SavedVariablesPerCharacter: ProfileName
+## IconTexture: Interface\AddOns\Puller\Media\logo.tga
 
 embeds.xml
 Definitions.lua	
