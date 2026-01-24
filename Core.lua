@@ -21,26 +21,34 @@ function SlashCmdList.PULLER(msg, _)
         return
     end
 
-    if args[1] == core.enums.commands.breakTimer then
-        core.logger:LogInfo("Setting Break Timer")
+    local cmd = args[1]
+    local arg = args[2]
+
+    if cmd == core.enums.commands.breakTimer then
         local breakDuration = 300
-        if args[2] then
-            local isNumber, minutes = core.utils:IsNumber(args[2])
+        
+        if arg then
+            local isNumber, minutes = core.utils:IsNumber(arg)
             if isNumber then
                 breakDuration = minutes * 60
+            else 
+                core.logger:LogWarning("You did not provide a number")
+                return
             end
         end
+        
+        core.logger:LogInfo("Setting Break Timer")
         C_PartyInfo.DoCountdown(breakDuration)
         return
     end
 
-    if args[1] == core.enums.commands.clear then
+    if cmd == core.enums.commands.clear then
         core.logger:LogInfo("Clearing Timer")
         C_PartyInfo.DoCountdown(0)
         return
     end
 
-    local isNumber, len = core.utils:IsNumber(args[1])
+    local isNumber, len = core.utils:IsNumber(cmd)
 
     if not isNumber then
         core.logger:LogWarning("You did not provide a number")
