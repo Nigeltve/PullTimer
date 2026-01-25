@@ -2,7 +2,7 @@
 ## Title: Puller
 ## Author: Flowlin
 ## Notes: Light weight pull timer
-## Version: 0.0.1
+## Version: 1.0.0
 ## SavedVariables: ProfileDB
 ## SavedVariablesPerCharacter: ProfileName
 ## IconTexture: Interface\AddOns\Puller\Media\logo.tga

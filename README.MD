@@ -14,7 +14,7 @@ This Lua script implements a `/pull` slash command for World of Warcraft that cr
 
 ### Basic Timer
 ```
-/pull 10
+/pull <seconds>
 ```
 Creates a countdown timer for the specified number of seconds. The timer will be visible to your entire party/raid.
 
