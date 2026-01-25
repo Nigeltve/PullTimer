@@ -6,7 +6,7 @@ This Lua script implements a `/pull` slash command for World of Warcraft that cr
 ## Command Syntax
 ```
 /pull <seconds>
-/pull break
+/pull break <seconds>
 /pull clear
 ```
 
@@ -33,9 +33,11 @@ Cancels any active countdown timer.
 ## Examples
 
 ```lua
+/pull            -- 10 seconds pull timer
 /pull 7          -- 7 second pull timer
 /pull 15         -- 15 second pull timer
 /pull break      -- 5 minute break
+/pull break 1    -- 1 minute break
 /pull clear      -- Cancel timer
 ```
 
