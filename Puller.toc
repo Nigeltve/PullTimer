@@ -1,8 +1,8 @@
-## Interface: 120000
+## Interface: 120000, 120001
 ## Title: Puller
 ## Author: Flowlin
 ## Notes: Light weight pull timer
-## Version: 1.0.0
+## Version: 1.0.1
 ## SavedVariables: ProfileDB
 ## SavedVariablesPerCharacter: ProfileName
 ## IconTexture: Interface\AddOns\Puller\Media\logo.tga
